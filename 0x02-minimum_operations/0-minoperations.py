@@ -13,17 +13,19 @@ def minOperations(n):
         int: Minimum number of operations required.
              Returns 0 if n is impossible to achieve.
     """
-    if n <= 0:
-        return 0
     
     operations = 0
     current = 1
     clipboard = 0
 
+    if current > n:
+        return 0
+
     while current < n:
-        if n % current == 0:
+        if n % current == 0 and current > clipboard:
             clipboard = current
-        current += clipboard
+        else:
+            current += clipboard
         operations += 1
 
     return operations
