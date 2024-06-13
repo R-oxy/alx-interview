@@ -4,7 +4,6 @@
 
 def minOperations(n):
     """ return min n of operations"""
-    
     operations = 0
     current = 1
     clipboard = 0
