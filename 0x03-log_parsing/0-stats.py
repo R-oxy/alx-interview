@@ -18,6 +18,7 @@ status_code_counts = {
 }
 line_count = 0
 
+
 def print_stats():
     """Print the current statistics."""
     print("File size: {}".format(total_file_size))
@@ -25,10 +26,12 @@ def print_stats():
         if status_code_counts[code] > 0:
             print("{}: {}".format(code, status_code_counts[code]))
 
+
 def signal_handler(sig, frame):
     """Handle keyboard interruption and print statistics."""
     print_stats()
     sys.exit(0)
+
 
 # Set up signal handler for keyboard interruption
 signal.signal(signal.SIGINT, signal_handler)
