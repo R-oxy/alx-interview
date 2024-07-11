@@ -3,7 +3,7 @@
 const request = require('request');
 const myArgs = process.argv.slice(2);
 const movieId = myArgs[0];
-const apiUrl = `https://swapi-api.hbtn.io/api/films/${movieId}`;
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 request(apiUrl, (error, response, body) => {
   if (error) {
